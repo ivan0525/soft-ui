@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <s-button>1</s-button>
+  <div id="app">
+    <p class="some-words">今天你写代码了吗?
+      <s-icon name="loading" />
+    </p>
   </div>
 </template>
 
@@ -10,5 +12,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+.some-words {
+  font-size: 30px;
+  color: royalblue;
+}
 </style>

@@ -1,7 +1,9 @@
 import Button from './button'
+import Icon from './icon'
 
 const components = {
-  Button
+  Button,
+  Icon
 }
 
 // 插件的install方法
