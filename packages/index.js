@@ -1,9 +1,11 @@
 import Button from './button'
 import Icon from './icon'
+import Switch from './switch'
 
 const components = {
   Button,
-  Icon
+  Icon,
+  Switch
 }
 
 // 插件的install方法
