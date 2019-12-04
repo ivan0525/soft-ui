@@ -73,7 +73,5 @@ export default {
       transform: translateX(-100%);
     }
   }
-  .s-switch__core {
-  }
 }
 </style>
