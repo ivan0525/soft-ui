@@ -40,29 +40,30 @@ export default {
 <style lang="less" scoped>
 .s-switch {
   position: relative;
-  width: 40px;
-  height: 20px;
+  width: 44px;
+  height: 22px;
   padding: 0;
   border: none;
   outline: none;
-  border-radius: 10px;
+  border: 1px solid transparent;
+  border-radius: 100px;
   transition: background-color 0.3s;
   background-color: #dcdfe6;
   cursor: pointer;
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 16px;
-    height: 16px;
-    border-radius: 16px;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
     transition: 0.3s;
     background-color: #fff;
   }
   &:active {
     &::before {
-      width: 20px;
+      width: 24px;
     }
   }
   &.s-switch__checked {
