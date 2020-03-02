@@ -14,7 +14,9 @@
       <s-divider direction="vertical"></s-divider>
       <span>风萧萧</span>
     </div>
+    <s-button @click="handleClick">xiidsfsadfdsfs</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
+    <s-button type="primary">Primary</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
   </div>
@@ -23,9 +25,14 @@
 <script>
 export default {
   name: 'App',
-  data () {
+  data() {
     return {
       checked: true
+    }
+  },
+  methods: {
+    handleClick() {
+      console.log(1)
     }
   }
 }

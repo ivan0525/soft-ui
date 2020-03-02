@@ -8,13 +8,13 @@ export default {
       default: '#409eff'
     }
   },
-  data () {
+  data() {
     return {
       isChecked: false
     }
   },
   methods: {
-    handleChange () {
+    handleChange() {
       if (!this.disabled) {
         this.isChecked = !this.isChecked
         this.$emit('input', this.isChecked)
@@ -22,7 +22,7 @@ export default {
       }
     }
   },
-  render () {
+  render() {
     const className = {
       class: [
         's-switch',
