@@ -14,7 +14,7 @@
       <s-divider direction="vertical"></s-divider>
       <span>风萧萧</span>
     </div>
-    <s-button @click="handleClick">xiidsfsadfdsfs</s-button>
+    <s-button @click="handleClick">Change</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
     <s-button type="primary">Primary</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
@@ -28,7 +28,7 @@
 <script>
 export default {
   name: 'App',
-  data () {
+  data() {
     return {
       checked: true,
       listData: [

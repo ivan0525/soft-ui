@@ -3,8 +3,8 @@ module.exports = {
     port: 8888, // 端口
   },
   productionSourceMap: false,
-  publicPath: './',
-  outputDir: './dist',
+  publicPath: "./",
+  outputDir: "./dist",
   runtimeCompiler: true,
-  lintOnSave: false
-}
+  lintOnSave: false,
+};

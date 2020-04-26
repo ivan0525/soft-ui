@@ -73,14 +73,6 @@ export default {
 <style lang="less" scoped>
 @primaryActive: #40a9ff;
 @primary: #1890ff;
-@keyframes wave {
-  from {
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
-  }
-  to {
-    box-shadow: 0 2px 0 red;
-  }
-}
 .s-button {
   & {
     height: 32px;
@@ -106,8 +98,7 @@ export default {
     }
     &:focus,
     &:active {
-      border-color: red;
-      animation: wave 0.3s ease;
+      border-color: @primaryActive;
     }
   }
 }
