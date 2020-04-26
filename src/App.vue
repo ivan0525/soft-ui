@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p class="some-words">今天你写代码了吗?
+    <!-- <p class="some-words">今天你写代码了吗?
       <s-divider direction="vertical"></s-divider>
       <s-icon name="loading" />
       <br>
@@ -18,22 +18,28 @@
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
     <s-button type="primary">Primary</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
-    <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
+    <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div> -->
+    <div class="content">
+      <s-dragger :data="listData"></s-dragger>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
-  data() {
+  data () {
     return {
-      checked: true
+      checked: true,
+      listData: [
+        { id: 111, content: '内容一' },
+        { id: 222, content: '内容二' },
+        { id: 333, content: '内容三' },
+        { id: 444, content: '内容四' }
+      ]
     }
   },
   methods: {
-    handleClick() {
-      console.log(1)
-    }
   }
 }
 </script>
@@ -42,5 +48,8 @@ export default {
 .some-words {
   font-size: 30px;
   color: royalblue;
+}
+.content {
+  width: 400px;
 }
 </style>
