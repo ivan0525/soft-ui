@@ -28,6 +28,7 @@
         {{ todo.content }}
       </template>
     </todo>
+    <foo></foo>
   </div>
 </template>
 
@@ -35,7 +36,8 @@
 export default {
   name: 'App',
   components: {
-    Todo: () => import('./components/Todo')
+    Todo: () => import('./components/Todo'),
+    Foo: () => import('./components/Foo')
   },
   data() {
     return {
