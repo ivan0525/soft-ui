@@ -22,20 +22,29 @@
     <div class="content">
       <s-dragger :data="listData"></s-dragger>
     </div>
+    <todo :todos="listData">
+      <template #todo="{todo}">
+        <span v-if="todo.isComplete">✅</span>
+        {{ todo.content }}
+      </template>
+    </todo>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  components: {
+    Todo: () => import('./components/Todo')
+  },
   data() {
     return {
       checked: true,
       listData: [
-        { id: 111, content: '内容一' },
-        { id: 222, content: '内容二' },
-        { id: 333, content: '内容三' },
-        { id: 444, content: '内容四' }
+        { id: 111, content: '内容一', isComplete: true },
+        { id: 222, content: '内容二', isComplete: false },
+        { id: 333, content: '内容三', isComplete: true },
+        { id: 444, content: '内容四', isComplete: true }
       ]
     }
   },
