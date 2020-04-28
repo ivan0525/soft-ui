@@ -3,13 +3,15 @@ import Icon from './icon'
 import Switch from './switch'
 import Divider from './divider'
 import Dragger from './dragger'
+import Input from './input'
 
 const components = {
   Button,
   Icon,
   Switch,
   Divider,
-  Dragger
+  Dragger,
+  Input
 }
 
 // 插件的install方法

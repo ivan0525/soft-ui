@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "async-validator": "^1.11.2",
+    "async-validator": "^3.2.4",
     "core-js": "^2.6.5",
     "highlight.js": "^9.15.6",
     "js-cookie": "^2.2.0",

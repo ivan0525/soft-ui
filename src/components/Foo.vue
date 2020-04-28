@@ -1,26 +1,51 @@
 <template>
   <div>
     <button @click="handleClick">I'm Foo</button>
+    <button @click="handleChangeData">change Data</button>
+    <div>{{ msg.msg }}</div>
     <far></far>
   </div>
 </template>
 
 <script>
+import Far from './Far'
 import emitter from '../mixins/emitter'
 export default {
   name: 'Foo',
+  inject: ['msg'],
   mixins: [emitter],
   components: {
-    Far: () => import('./Far')
+    Far
+    // Far: () => import('./Far')
   },
-  data() {
+  data () {
     return {
       message: 'Foo'
     }
   },
+  created () {
+    this.$on('msg-from-bar', this.showBarMsg)
+  },
+  // beforeCreate () {
+  //   debugger
+  // },
+  // created () {
+  //   debugger
+  //   console.log('Foo')
+  // },
+  // mounted () {
+  //   debugger
+  //   console.log('Foo')
+  // },
   methods: {
-    handleClick() {
+    handleClick () {
       this.broadcast('Bar', 'show-message', '我是Foo发过来的消息')
+    },
+    showBarMsg (data) {
+      window.alert(data.msg)
+    },
+    handleChangeData () {
+      console.log(this.msg)
     }
   }
 }

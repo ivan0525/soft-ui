@@ -29,19 +29,30 @@
       </template>
     </todo>
     <foo></foo>
+    <s-input
+      v-model="text"
+      @input="handleInput($event,'test')"
+      @change="handleChange"
+    ></s-input>
   </div>
 </template>
 
 <script>
+import Foo from './components/Foo'
 export default {
   name: 'App',
+  provide () {
+    return { msg: this.$data }
+  },
   components: {
     Todo: () => import('./components/Todo'),
-    Foo: () => import('./components/Foo')
+    Foo
   },
-  data() {
+  data () {
     return {
       checked: true,
+      msg: 'app',
+      text: '',
       listData: [
         { id: 111, content: '内容一', isComplete: true },
         { id: 222, content: '内容二', isComplete: false },
@@ -50,7 +61,19 @@ export default {
       ]
     }
   },
+  mounted () {
+    setTimeout(() => {
+      this.msg = 'asdjklf'
+      console.log(this.msg)
+    }, 3000)
+  },
   methods: {
+    handleInput (e, test) {
+      console.log(e, test)
+    },
+    handleChange (e) {
+      console.log(e)
+    }
   }
 }
 </script>

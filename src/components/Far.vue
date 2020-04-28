@@ -11,6 +11,17 @@ export default {
   components: {
     Bar: () => import('./Bar')
   }
+  // beforeCreate () {
+  //   debugger
+  // },
+  // created () {
+  //   debugger
+  //   console.log('Far')
+  // },
+  // mounted () {
+  //   debugger
+  //   console.log('Far')
+  // },
 }
 </script>
 
