@@ -1,6 +1,6 @@
-import Icon from './icon'
-Icon.install = function (Vue) {
-  Vue.component(Icon.name, Icon)
-}
+import SIcon from "./icon";
+SIcon.install = function(Vue) {
+  Vue.component(SIcon.name, SIcon);
+};
 
-export default Icon
+export default SIcon;

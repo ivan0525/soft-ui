@@ -1,5 +1,5 @@
-import Divider from './divider'
-Divider.install = function (Vue) {
-  Vue.component(Divider.name, Divider)
-}
-export default Divider
+import SDivider from "./divider";
+SDivider.install = function(Vue) {
+  Vue.component(SDivider.name, SDivider);
+};
+export default SDivider;

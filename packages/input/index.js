@@ -1,7 +1,7 @@
-import Input from './input'
+import SInput from "./input";
 
-Input.install = function (Vue) {
-  Vue.component(Input.name, Input)
-}
+SInput.install = function(Vue) {
+  Vue.component(SInput.name, SInput);
+};
 
-export default Input
+export default SInput;

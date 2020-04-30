@@ -1,21 +1,18 @@
 <template>
-  <i class='s-icon'>
-    <svg
-      :class="{'s-icon--loading': name==='loading'}"
-      aria-hidden="true"
-    >
+  <i class="s-icon">
+    <svg :class="{ 's-icon--loading': name === 'loading' }" aria-hidden="true">
       <use :xlink:href="`#i-${name}`"></use>
     </svg>
   </i>
 </template>
 <script>
-import './svg'
+import "./svg";
 export default {
-  name: 'sIcon',
+  name: "sIcon",
   props: {
-    name: String
-  }
-}
+    name: String,
+  },
+};
 </script>
 <style lang="less" scoped>
 .s-icon {
