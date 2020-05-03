@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "sForm",
+  name: "SForm",
   props: {
     model: {
       type: Object,
@@ -14,8 +14,15 @@ export default {
     rules: {
       type: Object,
     },
+    labelWidth: {
+      type: String,
+    },
   },
-  provide: this,
+  provide() {
+    return {
+      SForm: this,
+    };
+  },
   data() {
     return {
       fields: [],
@@ -42,4 +49,4 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less"></style>

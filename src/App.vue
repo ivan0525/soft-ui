@@ -29,56 +29,60 @@
       </template>
     </todo>
     <foo></foo>
-    <s-input
-      v-model="text"
-      @input="handleInput($event,'test')"
-      @change="handleChange"
-    ></s-input>
+    <s-input v-model="text"></s-input>
+    <s-form :model="personInfo" :rules="rules" label-width="90px">
+      <s-form-item label="姓名：" prop="name">
+        <s-input v-model="personInfo.name"></s-input>
+      </s-form-item>
+      <s-form-item label="年龄：" prop="age">
+        <s-input></s-input>
+      </s-form-item>
+    </s-form>
   </div>
 </template>
 
 <script>
-import Foo from './components/Foo'
+import Foo from "./components/Foo";
 export default {
-  name: 'App',
-  provide () {
-    return { msg: this.$data }
+  name: "App",
+  provide() {
+    return { msg: this.$data };
   },
   components: {
-    Todo: () => import('./components/Todo'),
-    Foo
+    Todo: () => import("./components/Todo"),
+    Foo,
   },
-  data () {
+  data() {
     return {
       checked: true,
-      msg: 'app',
-      text: '',
+      msg: "app",
+      text: "1",
+      personInfo: {
+        name: "",
+        age: "",
+      },
+      rules: {
+        name: [{ required: true, message: "请填写姓名", trigger: "blur" }],
+      },
       listData: [
-        { id: 111, content: '内容一', isComplete: true },
-        { id: 222, content: '内容二', isComplete: false },
-        { id: 333, content: '内容三', isComplete: true },
-        { id: 444, content: '内容四', isComplete: true }
-      ]
-    }
+        { id: 111, content: "内容一", isComplete: true },
+        { id: 222, content: "内容二", isComplete: false },
+        { id: 333, content: "内容三", isComplete: true },
+        { id: 444, content: "内容四", isComplete: true },
+      ],
+    };
   },
-  mounted () {
+  mounted() {
     setTimeout(() => {
-      this.msg = 'asdjklf'
-      console.log(this.msg)
-    }, 3000)
+      this.msg = "asdjklf";
+      console.log(this.msg);
+    }, 3000);
   },
-  methods: {
-    handleInput (e, test) {
-      console.log(e, test)
-    },
-    handleChange (e) {
-      console.log(e)
-    }
-  }
-}
+  methods: {},
+};
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .some-words {
   font-size: 30px;
   color: royalblue;
