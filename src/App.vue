@@ -1,6 +1,6 @@
 <template>
   <div>
-    <s-switch v-model:checked="checked"></s-switch>
+    <s-switch v-model:checked="checked" @change="handleClick"></s-switch>
     <!-- <p class="some-words">今天你写代码了吗?
       <s-divider direction="vertical"></s-divider>
       <s-icon name="loading" />
@@ -76,7 +76,11 @@ export default {
       console.log(this.msg)
     }, 3000)
   },
-  methods: {}
+  methods: {
+    handleClick(val, e) {
+      console.log(val, e)
+    }
+  }
 }
 </script>
 

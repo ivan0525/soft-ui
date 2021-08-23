@@ -3,6 +3,8 @@ import VueTypes, {func} from 'vue-types'
 import { withInstall } from '../../_utils'
 import './styles/index.less'
 
+type CheckedType = boolean | string | number
+
 const swtichProps = {
     disabled: VueTypes.bool.def(undefined),
     activeColor: VueTypes.string.def('#409eff'),
@@ -10,17 +12,18 @@ const swtichProps = {
     checked: VueTypes.oneOfType([VueTypes.string, VueTypes.number, VueTypes.bool]),
     checkedValue: VueTypes.oneOfType([VueTypes.string, VueTypes.number, VueTypes.bool]).def(true),
     unCheckedValue: VueTypes.oneOfType([VueTypes.string, VueTypes.number, VueTypes.bool]).def(false),
-    onClick: func<(event: Event) => void>()
+    onClick: func<(checked: CheckedType, e: Event) => void>(),
+    onKeydown: func<(e: Event) => void>(),
+    onMouseup: func<(e: Event) => void>()
 }
 
 export type SwtichProps = Partial<ExtractPropTypes<typeof swtichProps>>
 
-type CheckedType = boolean | string | number
 
 const SSwitch = defineComponent({
   name: 'SSwitch',
   props: swtichProps,
-  emits: ['update:checked', 'change', 'click', 'keydown'],
+  emits: ['update:checked', 'change', 'click', 'keydown', 'mouseup'],
   setup(props, {emit, expose}) {
     const switchNodeRef = ref()
 
@@ -65,6 +68,10 @@ const SSwitch = defineComponent({
       }
       emit('keydown', e)
     }
+
+    const handleMouseup = (e: MouseEvent) => {
+      emit('mouseup', e);
+    }
     return () => (
       <button 
         class={
@@ -78,6 +85,7 @@ const SSwitch = defineComponent({
           aria-checked={checked.value}
           onClick={handleClick}
           onKeydown={handleKeyDown}
+          onMouseup={handleMouseup}
           ref={switchNodeRef}
         >
         <span class="s-switch__core"></span>
