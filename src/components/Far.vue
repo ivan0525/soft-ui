@@ -9,7 +9,7 @@
 export default {
   name: 'Far',
   components: {
-    Bar: () => import('./Bar')
+    Bar: () => import('./Bar.vue')
   }
   // beforeCreate () {
   //   debugger

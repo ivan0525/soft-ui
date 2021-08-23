@@ -1,0 +1,37 @@
+.s-switch {
+  position: relative;
+  width: 44px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  background-color: #dcdfe6;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    transition: 0.3s;
+    background-color: #fff;
+  }
+  &:active {
+    &::before {
+      width: 24px;
+    }
+  }
+  &.s-switch__checked {
+    background-color: #409eff;
+    &::before {
+      left: 100%;
+      margin-left: -3px;
+      transform: translateX(-100%);
+    }
+  }
+}

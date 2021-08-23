@@ -1,34 +1,70 @@
 {
   "name": "soft-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A UI library, build with Vue.js",
   "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "npm run lint:code && npm run lint:type",
+    "lint:code": "eslint --fix \"{src,build,scripts,demo}/**/*.{ts,tsx,js,vue,md}\""
   },
   "dependencies": {
-    "async-validator": "^3.2.4",
-    "core-js": "^2.6.5",
-    "highlight.js": "^9.15.6",
-    "js-cookie": "^2.2.0",
-    "nprogress": "^0.2.0",
-    "vue": "^2.6.10",
-    "vue-highlight.js": "^3.1.0",
-    "vue-router": "^3.0.3"
+    "async-validator": "^4.0.2",
+    "less": "^4.1.1",
+    "vue": "^3.2.4",
+    "vue-types": "^4.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
-    "lint-staged": "^8.1.5",
-    "vue-template-compiler": "^2.5.21"
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.7",
+    "@vue/compiler-sfc": "^3.0.4",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "autoprefixer": "^10.3.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-markdown": "^2.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5",
+    "vite": "^2.5.0",
+    "vite-plugin-babel-import": "^2.0.5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.tsx": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.vue": [
+      "prettier --parser=vue --write",
+      "eslint --fix"
+    ],
+    "*.css": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write --parser markdown --prose-wrap never",
+      "eslint --fix"
+    ]
   },
   "repository": {
     "type": "git",
@@ -38,18 +74,12 @@
     "Vue",
     "UI"
   ],
-  "author": "Yufeng zhuang",
+  "author": "ivan0525",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/soloPhone/soft-ui/issues"
   },
   "homepage": "https://github.com/soloPhone/soft-ui#readme",
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions"

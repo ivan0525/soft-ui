@@ -1,5 +1,10 @@
 module.exports = {
   presets: [
-    '@vue/app'
+    [
+      '@babel/preset-env',
+      {
+        targets: '>2%, not IE 11'
+      }
+    ]
   ]
 }

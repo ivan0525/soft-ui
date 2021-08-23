@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Far from './Far'
+import Far from './Far.vue'
 import emitter from '../mixins/emitter'
 export default {
   name: 'Foo',

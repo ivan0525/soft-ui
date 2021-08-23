@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div>
+    <s-switch v-model:checked="checked"></s-switch>
     <!-- <p class="some-words">今天你写代码了吗?
       <s-divider direction="vertical"></s-divider>
       <s-icon name="loading" />
@@ -18,7 +19,7 @@
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
     <s-button type="primary">Primary</s-button>
     <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
-    <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div> -->
+    <div style="height:1px;background-color:#dcdfe6;margin: 20px 0;"></div>
     <div class="content">
       <s-dragger :data="listData"></s-dragger>
     </div>
@@ -27,59 +28,56 @@
         <span v-if="todo.isComplete">✅</span>
         {{ todo.content }}
       </template>
-    </todo>
-    <foo></foo>
+    </todo> -->
     <s-input v-model="text"></s-input>
-    <s-form :model="personInfo" :rules="rules" label-width="90px">
+    <!-- <s-form :model="personInfo" :rules="rules" label-width="90px">
       <s-form-item label="姓名：" prop="name">
         <s-input v-model="personInfo.name"></s-input>
       </s-form-item>
       <s-form-item label="年龄：" prop="age">
         <s-input></s-input>
       </s-form-item>
-    </s-form>
+    </s-form> -->
   </div>
 </template>
 
 <script>
-import Foo from "./components/Foo";
 export default {
-  name: "App",
-  provide() {
-    return { msg: this.$data };
+  name: 'App',
+  provide () {
+    return { msg: this.$data }
   },
   components: {
-    Todo: () => import("./components/Todo"),
-    Foo,
+    Todo: () => import('./components/Todo/index.vue')
   },
-  data() {
+  data () {
     return {
-      checked: true,
-      msg: "app",
-      text: "1",
+      checked: false,
+      msg: 'app',
+      text: '1',
       personInfo: {
-        name: "",
-        age: "",
+        name: '',
+        age: ''
       },
       rules: {
-        name: [{ required: true, message: "请填写姓名", trigger: "blur" }],
+        name: [{ required: true, message: '请填写姓名', trigger: 'blur' }]
       },
       listData: [
-        { id: 111, content: "内容一", isComplete: true },
-        { id: 222, content: "内容二", isComplete: false },
-        { id: 333, content: "内容三", isComplete: true },
-        { id: 444, content: "内容四", isComplete: true },
-      ],
-    };
+        { id: 111, content: '内容一', isComplete: true },
+        { id: 222, content: '内容二', isComplete: false },
+        { id: 333, content: '内容三', isComplete: true },
+        { id: 444, content: '内容四', isComplete: true }
+      ]
+    }
   },
-  mounted() {
+  mounted () {
     setTimeout(() => {
-      this.msg = "asdjklf";
-      console.log(this.msg);
-    }, 3000);
+      this.msg = 'asdjklf'
+      console.log(this.msg)
+    }, 3000)
   },
-  methods: {},
-};
+  methods: {}
+}
 </script>
 
 <style lang="less">

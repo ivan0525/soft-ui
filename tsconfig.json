@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "soft-ui": ["./src"]
+    },
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "module": "ES6",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "ES6",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ]
+  }
+}
