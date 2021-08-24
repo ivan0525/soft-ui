@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "npm run lint:code && npm run lint:type",
-    "lint:code": "eslint --fix \"{src,build,scripts,demo}/**/*.{ts,tsx,js,vue,md}\""
+    "lint:code": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue,.ts,.tsx",
+    "prepare": "husky install"
   },
   "dependencies": {
     "async-validator": "^4.0.2",
@@ -21,15 +22,20 @@
     "@vitejs/plugin-vue": "^1.4.0",
     "@vitejs/plugin-vue-jsx": "^1.1.7",
     "@vue/compiler-sfc": "^3.0.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "autoprefixer": "^10.3.2",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-with-typescript": "^20.0.0",
     "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-markdown": "^2.2.0",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.16.0",
@@ -37,6 +43,7 @@
     "lint-staged": "^11.1.2",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
+    "stylelint-config-prettier": "^8.0.2",
     "typescript": "^4.3.5",
     "vite": "^2.5.0",
     "vite-plugin-babel-import": "^2.0.5"

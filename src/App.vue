@@ -41,14 +41,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'App',
   provide () {
-    return { msg: this.$data }
-  },
-  components: {
-    Todo: () => import('./components/Todo/index.vue')
+    return { msg: this.$data };
   },
   data () {
     return {
@@ -57,31 +54,31 @@ export default {
       text: '1',
       personInfo: {
         name: '',
-        age: ''
+        age: '',
       },
       rules: {
-        name: [{ required: true, message: '请填写姓名', trigger: 'blur' }]
+        name: [{ required: true, message: '请填写姓名', trigger: 'blur' }],
       },
       listData: [
         { id: 111, content: '内容一', isComplete: true },
         { id: 222, content: '内容二', isComplete: false },
         { id: 333, content: '内容三', isComplete: true },
-        { id: 444, content: '内容四', isComplete: true }
-      ]
-    }
+        { id: 444, content: '内容四', isComplete: true },
+      ],
+    };
   },
   mounted () {
     setTimeout(() => {
-      this.msg = 'asdjklf'
-      console.log(this.msg)
-    }, 3000)
+      this.msg = 'asdjklf';
+      console.log(this.msg);
+    }, 3000);
   },
   methods: {
-    handleClick(val, e) {
-      console.log(val, e)
-    }
-  }
-}
+    handleClick (val, e) {
+      console.log(val, e);
+    },
+  },
+};
 </script>
 
 <style lang="less">

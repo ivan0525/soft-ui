@@ -256,7 +256,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.12.0", "@babel/parser@^7.12.11", "@babel/parser@^7.13.9", "@babel/parser@^7.14.5", "@babel/parser@^7.15.0":
+"@babel/parser@^7.12.0", "@babel/parser@^7.12.11", "@babel/parser@^7.13.9", "@babel/parser@^7.14.5", "@babel/parser@^7.15.0", "@babel/parser@^7.7.0":
   version "7.15.3"
   resolved "http://10.200.0.5:8081/repository/npm-group/@babel/parser/-/parser-7.15.3.tgz#3416d9bea748052cfcb63dbcc27368105b1ed862"
   integrity sha1-NBbZvqdIBSz8tj28wnNoEFse2GI=
@@ -329,7 +329,7 @@
     globals "^11.1.0"
     lodash "^4.17.13"
 
-"@babel/traverse@^7.12.12", "@babel/traverse@^7.15.0":
+"@babel/traverse@^7.12.12", "@babel/traverse@^7.15.0", "@babel/traverse@^7.7.0":
   version "7.15.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/@babel/traverse/-/traverse-7.15.0.tgz#4cca838fd1b2a03283c1f38e141f639d60b3fc98"
   integrity sha1-TMqDj9GyoDKDwfOOFB9jnWCz/Jg=
@@ -353,7 +353,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.12.0", "@babel/types@^7.12.12", "@babel/types@^7.13.0", "@babel/types@^7.14.5", "@babel/types@^7.14.8", "@babel/types@^7.15.0":
+"@babel/types@^7.12.0", "@babel/types@^7.12.12", "@babel/types@^7.13.0", "@babel/types@^7.14.5", "@babel/types@^7.14.8", "@babel/types@^7.15.0", "@babel/types@^7.7.0":
   version "7.15.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/@babel/types/-/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
   integrity sha1-Ya8R8ihsTpxpyo3rX0N1pzxy3L0=
@@ -476,6 +476,18 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
+"@typescript-eslint/experimental-utils@^4.0.1":
+  version "4.29.3"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/experimental-utils/-/experimental-utils-4.29.3.tgz#52e437a689ccdef73e83c5106b34240a706f15e1"
+  integrity sha1-UuQ3ponM3vc+g8UQazQkCnBvFeE=
+  dependencies:
+    "@types/json-schema" "^7.0.7"
+    "@typescript-eslint/scope-manager" "4.29.3"
+    "@typescript-eslint/types" "4.29.3"
+    "@typescript-eslint/typescript-estree" "4.29.3"
+    eslint-scope "^5.1.1"
+    eslint-utils "^3.0.0"
+
 "@typescript-eslint/parser@^4.0.0":
   version "4.29.2"
   resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/parser/-/parser-4.29.2.tgz#1c7744f4c27aeb74610c955d3dce9250e95c370a"
@@ -494,10 +506,23 @@
     "@typescript-eslint/types" "4.29.2"
     "@typescript-eslint/visitor-keys" "4.29.2"
 
+"@typescript-eslint/scope-manager@4.29.3":
+  version "4.29.3"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/scope-manager/-/scope-manager-4.29.3.tgz#497dec66f3a22e459f6e306cf14021e40ec86e19"
+  integrity sha1-SX3sZvOiLkWfbjBs8UAh5A7Ibhk=
+  dependencies:
+    "@typescript-eslint/types" "4.29.3"
+    "@typescript-eslint/visitor-keys" "4.29.3"
+
 "@typescript-eslint/types@4.29.2":
   version "4.29.2"
   resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/types/-/types-4.29.2.tgz#fc0489c6b89773f99109fb0aa0aaddff21f52fcd"
   integrity sha1-/ASJxriXc/mRCfsKoKrd/yH1L80=
+
+"@typescript-eslint/types@4.29.3":
+  version "4.29.3"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/types/-/types-4.29.3.tgz#d7980c49aef643d0af8954c9f14f656b7fd16017"
+  integrity sha1-15gMSa72Q9CviVTJ8U9la3/RYBc=
 
 "@typescript-eslint/typescript-estree@4.29.2":
   version "4.29.2"
@@ -512,12 +537,33 @@
     semver "^7.3.5"
     tsutils "^3.21.0"
 
+"@typescript-eslint/typescript-estree@4.29.3":
+  version "4.29.3"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/typescript-estree/-/typescript-estree-4.29.3.tgz#1bafad610015c4ded35c85a70b6222faad598b40"
+  integrity sha1-G6+tYQAVxN7TXIWnC2Ii+q1Zi0A=
+  dependencies:
+    "@typescript-eslint/types" "4.29.3"
+    "@typescript-eslint/visitor-keys" "4.29.3"
+    debug "^4.3.1"
+    globby "^11.0.3"
+    is-glob "^4.0.1"
+    semver "^7.3.5"
+    tsutils "^3.21.0"
+
 "@typescript-eslint/visitor-keys@4.29.2":
   version "4.29.2"
   resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/visitor-keys/-/visitor-keys-4.29.2.tgz#d2da7341f3519486f50655159f4e5ecdcb2cd1df"
   integrity sha1-0tpzQfNRlIb1BlUVn05ezcss0d8=
   dependencies:
     "@typescript-eslint/types" "4.29.2"
+    eslint-visitor-keys "^2.0.0"
+
+"@typescript-eslint/visitor-keys@4.29.3":
+  version "4.29.3"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@typescript-eslint/visitor-keys/-/visitor-keys-4.29.3.tgz#c691760a00bd86bf8320d2a90a93d86d322f1abf"
+  integrity sha1-xpF2CgC9hr+DINKpCpPYbTIvGr8=
+  dependencies:
+    "@typescript-eslint/types" "4.29.3"
     eslint-visitor-keys "^2.0.0"
 
 "@vitejs/plugin-vue-jsx@^1.1.7":
@@ -606,6 +652,13 @@
   dependencies:
     "@vue/compiler-dom" "3.2.4"
     "@vue/shared" "3.2.4"
+
+"@vue/eslint-config-prettier@^6.0.0":
+  version "6.0.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/@vue/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#ad5912b308f4ae468458e02a2b05db0b9d246700"
+  integrity sha1-rVkSswj0rkaEWOAqKwXbC50kZwA=
+  dependencies:
+    eslint-config-prettier "^6.0.0"
 
 "@vue/eslint-config-standard@^6.1.0":
   version "6.1.0"
@@ -779,6 +832,18 @@ autoprefixer@^10.3.2:
     fraction.js "^4.1.1"
     normalize-range "^0.1.2"
     postcss-value-parser "^4.1.0"
+
+babel-eslint@^10.1.0:
+  version "10.1.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/babel-eslint/-/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
+  integrity sha1-aWjlaKkQt4+zd5zdi2rC9HmUMjI=
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.7.0"
+    "@babel/traverse" "^7.7.0"
+    "@babel/types" "^7.7.0"
+    eslint-visitor-keys "^1.0.0"
+    resolve "^1.12.0"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -1196,6 +1261,18 @@ escape-string-regexp@^4.0.0:
   resolved "http://10.200.0.5:8081/repository/npm-group/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha1-FLqDpdNz49MR5a/KKc9b+tllvzQ=
 
+eslint-config-prettier@^6.0.0:
+  version "6.15.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
+  integrity sha1-f5P2y31FqS8VN6cOzAY2bhrG/tk=
+  dependencies:
+    get-stdin "^6.0.0"
+
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
+
 eslint-config-standard-with-typescript@^20.0.0:
   version "20.0.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/eslint-config-standard-with-typescript/-/eslint-config-standard-with-typescript-20.0.0.tgz#0c550eca0a216cbf8da9013eb6e311acd3102d87"
@@ -1271,6 +1348,13 @@ eslint-plugin-import@^2.24.1:
     resolve "^1.20.0"
     tsconfig-paths "^3.10.1"
 
+eslint-plugin-jest@^24.4.0:
+  version "24.4.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/eslint-plugin-jest/-/eslint-plugin-jest-24.4.0.tgz#fa4b614dbd46a98b652d830377971f097bda9262"
+  integrity sha1-+kthTb1GqYtlLYMDd5cfCXvakmI=
+  dependencies:
+    "@typescript-eslint/experimental-utils" "^4.0.1"
+
 eslint-plugin-markdown@^2.2.0:
   version "2.2.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/eslint-plugin-markdown/-/eslint-plugin-markdown-2.2.0.tgz#9c30bd51538a815e87e96646c69f11466b4c165f"
@@ -1289,6 +1373,13 @@ eslint-plugin-node@^11.1.0:
     minimatch "^3.0.4"
     resolve "^1.10.1"
     semver "^6.1.0"
+
+eslint-plugin-prettier@^3.4.1:
+  version "3.4.1"
+  resolved "http://10.200.0.5:8081/repository/npm-group/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.1.tgz#e9ddb200efb6f3d05ffe83b1665a716af4a387e5"
+  integrity sha1-6d2yAO+289Bf/oOxZlpxavSjh+U=
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 eslint-plugin-promise@^5.1.0:
   version "5.1.0"
@@ -1332,7 +1423,7 @@ eslint-utils@^3.0.0:
   dependencies:
     eslint-visitor-keys "^2.0.0"
 
-eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.3.0:
+eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.3.0:
   version "1.3.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz#30ebd1ef7c2fdff01c3a4f151044af25fab0523e"
   integrity sha1-MOvR73wv3/AcOk8VEESvJfqwUj4=
@@ -1465,6 +1556,11 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "http://10.200.0.5:8081/repository/npm-group/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=
 
+fast-diff@^1.1.2:
+  version "1.2.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
+  integrity sha1-c+4RmC2Gyq95WYKNUZz+kn+sXwM=
+
 fast-glob@^3.1.1:
   version "3.2.7"
   resolved "http://10.200.0.5:8081/repository/npm-group/fast-glob/-/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
@@ -1582,6 +1678,11 @@ get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.2"
   resolved "http://10.200.0.5:8081/repository/npm-group/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.2.tgz#b5fde77f22cbe35f390b4e089922c50bce6ef664"
   integrity sha1-tf3nfyLL4185C04ImSLFC85u9mQ=
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha1-ngm/cSs2CrkiXoEgSPcf3pyJZXs=
 
 get-stream@^6.0.0:
   version "6.0.1"
@@ -2588,6 +2689,13 @@ prelude-ls@^1.2.1:
   resolved "http://10.200.0.5:8081/repository/npm-group/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha1-3rxkidem5rDnYRiIzsiAM30xY5Y=
 
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "http://10.200.0.5:8081/repository/npm-group/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha1-0j1B/hN1ZG3i0BBNNFSjAIgCz3s=
+  dependencies:
+    fast-diff "^1.1.2"
+
 prettier@^2.3.2:
   version "2.3.2"
   resolved "http://10.200.0.5:8081/repository/npm-group/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
@@ -2645,7 +2753,7 @@ resolve-from@^4.0.0:
   resolved "http://10.200.0.5:8081/repository/npm-group/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha1-SrzYUq0y3Xuqv+m0DgCjbbXzkuY=
 
-resolve@^1.10.0, resolve@^1.10.1, resolve@^1.20.0:
+resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.20.0:
   version "1.20.0"
   resolved "http://10.200.0.5:8081/repository/npm-group/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=
@@ -2913,6 +3021,11 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "http://10.200.0.5:8081/repository/npm-group/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha1-MfEoGzgyYwQ0gxwxDAHMzajL4AY=
+
+stylelint-config-prettier@^8.0.2:
+  version "8.0.2"
+  resolved "http://10.200.0.5:8081/repository/npm-group/stylelint-config-prettier/-/stylelint-config-prettier-8.0.2.tgz#da9de33da4c56893cbe7e26df239a7374045e14e"
+  integrity sha1-2p3jPaTFaJPL5+Jt8jmnN0BF4U4=
 
 supports-color@^5.3.0:
   version "5.5.0"
