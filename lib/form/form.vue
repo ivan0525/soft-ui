@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "SForm",
+  name: 'SForm',
   props: {
     model: {
       type: Object,
@@ -29,10 +29,10 @@ export default {
     };
   },
   created() {
-    this.$on("on-field-item-add", (field) => {
+    this.$on('on-field-item-add', field => {
       this.fields.push(field);
     });
-    this.$on("on-field-item-remove", (field) => {
+    this.$on('on-field-item-remove', field => {
       if (field.prop) {
         this.fields.splice(this.fields.indexOf(field), 1);
       }
@@ -41,7 +41,7 @@ export default {
   methods: {
     // 公开方法：重置全部数据
     resetFields() {
-      this.fields.forEach((field) => {
+      this.fields.forEach(field => {
         field.resetField();
       });
     },

@@ -15,16 +15,16 @@
 </template>
 
 <script>
-import emitter from "../../src/mixins/emitter";
-import AsyncValidator from "async-validator";
+import emitter from '../../src/mixins/emitter';
+import AsyncValidator from 'async-validator';
 export default {
-  name: "SFormItem",
+  name: 'SFormItem',
   mixins: [emitter],
-  inject: ["SForm"],
+  inject: ['SForm'],
   props: {
     label: {
       type: String,
-      default: "",
+      default: '',
     },
     prop: {
       type: String,
@@ -33,8 +33,8 @@ export default {
   data() {
     return {
       isRequired: false, // 是否为必填
-      validateState: "", // 校验状态
-      validateMessage: "",
+      validateState: '', // 校验状态
+      validateMessage: '',
     };
   },
   computed: {
@@ -45,13 +45,13 @@ export default {
   },
   // 组件销毁前，将从实例从Form的缓存中移除
   beforeDestroy() {
-    this.dispatch("SForm", "on-field-item-remove", this);
+    this.dispatch('SForm', 'on-field-item-remove', this);
   },
   // 组件挂载时，将实例缓存到Form中
   mounted() {
     // 如果没有传入prop，就不需要校验
     if (this.prop) {
-      this.dispatch("SForm", "on-field-item-add", this);
+      this.dispatch('SForm', 'on-field-item-add', this);
       // 设置初始值，以便在重置时恢复默认值
       this.initialValue = this.fieldValue;
       this.setRules();
@@ -61,14 +61,14 @@ export default {
     setRules() {
       let rules = this.getRules();
       if (rules.length) {
-        rules.every((rule) => {
+        rules.every(rule => {
           // 如果当前校验规则中有必填项，则将其标出
           this.isRequired = rule.required;
         });
       }
       // 监听来自表单组件中派发的自定义事件
-      this.$on("on-form-change", this.onFieldChange);
-      this.$on("on-form-blur", this.onFieldBlur);
+      this.$on('on-form-change', this.onFieldChange);
+      this.$on('on-form-blur', this.onFieldBlur);
     },
 
     // 从SForm的rules中，获取当前SFormItem的校验规则
@@ -82,44 +82,42 @@ export default {
     // 只支持blur和change，所以过滤出符合要求的校验规则
     getFilteredRules(trigger) {
       const rules = this.getRules();
-      return rules.filter(
-        (rule) => !rule.trigger || rule.trigger.indexOf(trigger) !== -1
-      );
+      return rules.filter(rule => !rule.trigger || rule.trigger.indexOf(trigger) !== -1);
     },
 
     // 校验数据
-    validate(trigger, callback = function() {}) {
+    validate(trigger, callback = function () {}) {
       let rules = this.getFilteredRules(trigger);
       if (!rules || rules.length === 0) {
         return true;
       }
       // 设置状态为校验中
-      this.validateState = "validating";
+      this.validateState = 'validating';
       // 以下为 async-validator 库的调用方法
       let descriptor = {};
       descriptor[this.prop] = rules;
       const validator = new AsyncValidator(descriptor);
       let model = {};
       model[this.prop] = this.fieldValue;
-      validator.validate(model, { firstFields: true }, (errors) => {
-        this.validateState = !errors ? "success" : "error";
-        this.validateMessage = errors ? errors[0].message : "";
+      validator.validate(model, { firstFields: true }, errors => {
+        this.validateState = !errors ? 'success' : 'error';
+        this.validateMessage = errors ? errors[0].message : '';
         callback(this.validateMessage);
       });
     },
 
     // 重置数据
     resetField() {
-      this.validateMessage = "";
-      this.validateState = "";
+      this.validateMessage = '';
+      this.validateState = '';
       this.SForm.model[this.prop] = this.initialValue;
     },
     onFieldBlur() {
-      this.validate("blur");
+      this.validate('blur');
     },
 
     onFieldChange() {
-      this.validate("change");
+      this.validate('change');
     },
   },
 };
@@ -129,7 +127,7 @@ export default {
 .s-form-item {
   margin-bottom: 22px;
   &.is-required::before {
-    content: "*";
+    content: '*';
     margin-right: 4px;
     color: red;
   }

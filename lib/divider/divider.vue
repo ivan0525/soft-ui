@@ -1,7 +1,7 @@
 <template>
   <div :class="['s-divider', `s-divider__${direction}`]">
     <div
-      v-if="$slots.default&&direction!=='vertical'"
+      v-if="$slots.default && direction !== 'vertical'"
       :class="['s-divider__text', `is-${contentPosition}`]"
     >
       <slot />
@@ -17,16 +17,16 @@ export default {
     direction: {
       type: String,
       default: 'horizontal',
-      validator: (val) => ['vertical', 'horizontal'].includes(val)
+      validator: val => ['vertical', 'horizontal'].includes(val),
     },
     // 分割线上文字的位置
     contentPosition: {
       type: String,
       default: 'center',
-      validator: (val) => ['left', 'center', 'rignt'].includes(val)
-    }
-  }
-}
+      validator: val => ['left', 'center', 'rignt'].includes(val),
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>

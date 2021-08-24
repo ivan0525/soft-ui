@@ -7,7 +7,9 @@
         :key="item.id"
         :id="item.id"
         @mousedown="handleMouseDown($event)"
-      >{{ item.content }}</div>
+      >
+        {{ item.content }}
+      </div>
     </div>
   </div>
 </template>
@@ -19,27 +21,27 @@ export default {
     // 需要应用
     data: {
       type: Array,
-      default: () => ([])
-    }
+      default: () => [],
+    },
   },
-  data () {
-    return {}
+  data() {
+    return {};
   },
   methods: {
-    handleMouseDown (e) {
-      const selectedEle = e.target
-      selectedEle.classList.add('selected-item')
-      selectedEle.setAttribute('draggable', true)
+    handleMouseDown(e) {
+      const selectedEle = e.target;
+      selectedEle.classList.add('selected-item');
+      selectedEle.setAttribute('draggable', true);
       selectedEle.addEventListener('dragover', function (e) {
-        console.log(e)
-      })
+        console.log(e);
+      });
       document.addEventListener('mouseup', function (e) {
-        selectedEle.setAttribute('draggable', false)
-        selectedEle.classList.remove('selected-item')
-      })
-    }
-  }
-}
+        selectedEle.setAttribute('draggable', false);
+        selectedEle.classList.remove('selected-item');
+      });
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>

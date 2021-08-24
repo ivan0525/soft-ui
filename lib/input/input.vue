@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import emitter from "./../../src/mixins/emitter";
+import emitter from './../../src/mixins/emitter';
 export default {
-  name: "sInput",
+  name: 'SInput',
   mixins: [emitter],
   props: {
     value: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   data() {
@@ -34,11 +34,11 @@ export default {
   methods: {
     handleInput(e) {
       const value = e.target.value;
-      this.$emit("input", value);
-      this.dispatch("SFormItem", "on-form-change", value);
+      this.$emit('input', value);
+      this.dispatch('SFormItem', 'on-form-change', value);
     },
     handleBlur() {
-      this.dispatch("SFormItem", "on-form-blur", this.currentValue);
+      this.dispatch('SFormItem', 'on-form-blur', this.currentValue);
     },
   },
 };

@@ -1,37 +1,24 @@
 <script>
 export default {
-  name: 'sButton',
+  name: 'SButton',
   props: {
     // 按钮类型
     type: {
       type: String,
       default: 'default',
-      validator: (val) =>
-        [
-          'primary',
-          'success',
-          'warning',
-          'info',
-          'danger',
-          'default',
-          'text'
-        ].includes(val)
+      validator: val =>
+        ['primary', 'success', 'warning', 'info', 'danger', 'default', 'text'].includes(val),
     },
     // 按钮图标
     icon: {
       type: String,
-      default: ''
+      default: '',
     },
     // 按钮尺寸
     size: {
       type: String,
       default: 'medium',
-      validator: (val) =>
-        [
-          'small',
-          'medium',
-          'large'
-        ].includes(val)
+      validator: val => ['small', 'medium', 'large'].includes(val),
     },
     // 幽灵按钮
     plain: Boolean,
@@ -49,26 +36,23 @@ export default {
       class: [
         's-button',
         this.type && `s-button-${this.type}`,
-        this.size && `s-button-${this.size}`
-      ]
-    }
+        this.size && `s-button-${this.size}`,
+      ],
+    };
 
-    const slots = Object.keys(this.$slots).reduce(
-      (arr, key) => arr.concat(this.$slots[key]),
-      []
-    )
+    const slots = Object.keys(this.$slots).reduce((arr, key) => arr.concat(this.$slots[key]), []);
     // 按钮点击事件
     const handleClick = () => {
-      this.$emit('click')
-    }
+      this.$emit('click');
+    };
 
     return (
       <button type="button" {...className} onClick={handleClick}>
         {slots.length > 0 ? <span>{this.$slots.default}</span> : ''}
       </button>
-    )
-  }
-}
+    );
+  },
+};
 </script>
 <style lang="less" scoped>
 @primaryActive: #40a9ff;

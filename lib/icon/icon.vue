@@ -6,9 +6,9 @@
   </i>
 </template>
 <script>
-import "./svg";
+import './svg';
 export default {
-  name: "sIcon",
+  name: 'sIcon',
   props: {
     name: String,
   },
