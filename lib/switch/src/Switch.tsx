@@ -1,4 +1,5 @@
-import { defineComponent, ref, h, ExtractPropTypes, watch, computed } from 'vue';
+import type { ExtractPropTypes } from 'vue';
+import { defineComponent, ref, h, watch, computed } from 'vue';
 import VueTypes, { func } from 'vue-types';
 import { withInstall } from '../../_utils';
 import './styles/index.less';

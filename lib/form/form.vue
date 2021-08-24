@@ -7,6 +7,11 @@
 <script>
 export default {
   name: 'SForm',
+  provide() {
+    return {
+      SForm: this,
+    };
+  },
   props: {
     model: {
       type: Object,
@@ -17,11 +22,6 @@ export default {
     labelWidth: {
       type: String,
     },
-  },
-  provide() {
-    return {
-      SForm: this,
-    };
   },
   data() {
     return {

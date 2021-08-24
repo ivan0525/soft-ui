@@ -8,7 +8,7 @@
 <script>
 import './svg';
 export default {
-  name: 'sIcon',
+  name: 'SIcon',
   props: {
     name: String,
   },

@@ -2,10 +2,10 @@
   <div class="s-dragger">
     <div class="list-group">
       <div
-        class="list-group-item"
         v-for="item in data"
-        :key="item.id"
         :id="item.id"
+        :key="item.id"
+        class="list-group-item"
         @mousedown="handleMouseDown($event)"
       >
         {{ item.content }}
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'sDragger',
+  name: 'SDragger',
   props: {
     // 需要应用
     data: {

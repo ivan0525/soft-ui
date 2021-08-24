@@ -44,7 +44,7 @@ export default {
     },
   },
   // 组件销毁前，将从实例从Form的缓存中移除
-  beforeDestroy() {
+  beforeUnmount() {
     this.dispatch('SForm', 'on-field-item-remove', this);
   },
   // 组件挂载时，将实例缓存到Form中

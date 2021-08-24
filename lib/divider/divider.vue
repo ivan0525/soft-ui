@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'sDivider',
+  name: 'SDivider',
   props: {
     // 分割线的方向
     direction: {

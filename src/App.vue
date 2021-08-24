@@ -5,6 +5,13 @@
 </template>
 
 <script lang="ts">
+// type Animal = 'cat' | 'dog' | 'rabbit' | 'snake'
+// const animals: Animal[] = ['cat', 'dog', 'rabbit', 'snake'];
+// const notWidened = <T extends string>(val: T[]) => val;
+
+// const animals = notWidened(['cat', 'dog', 'rabbit', 'snake']);
+// type Animal = (typeof animals)[number];
+
 import { defineComponent, reactive, toRef } from 'vue';
 
 export default defineComponent({
