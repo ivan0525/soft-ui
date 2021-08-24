@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "npm run lint:code && npm run lint:type",
-    "lint:code": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue,.ts,.tsx",
+    "lint:code": "eslint --fix \"{src,build,scripts,demo}/**/*.{ts,tsx,js,vue,md}\"",
+    "postinstall": "git config core.hooksPath hooks",
     "prepare": "husky install"
   },
   "dependencies": {
